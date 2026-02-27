@@ -4,6 +4,10 @@ import pandas as pd
 from sqlalchemy import create_engine, text
 import logging
 
+
+from airflow.utils.email import send_email
+THRESHOLD = 0.1
+
 logger = logging.getLogger(__name__)
 
 def load_to_postgres(**context):
@@ -65,6 +69,25 @@ def load_to_postgres(**context):
 
         conn.execute(text("CREATE INDEX IF NOT EXISTS idx_prices_coin ON prices(coin_id);"))
         conn.execute(text("CREATE INDEX IF NOT EXISTS idx_market_coin ON market_data(coin_id);"))
+
+
+    last_prices = pd.read_sql("SELECT coin_id, price_usd FROM prices ORDER BY ingestion_timestamp DESC", engine)
+    last_prices = last_prices.groupby('coin_id').first().reset_index()
+
+    
+    merged = prices_df.merge(last_prices, on='coin_id', how='left', suffixes=('_current', '_last'))
+
+   
+    major_changes = merged[(merged['price_usd_last'].notna()) &
+                           (abs(merged['price_usd_current'] - merged['price_usd_last']) / merged['price_usd_last'] >= THRESHOLD)]
+    if not major_changes.empty:
+        msg = "Major price changes detected in:\n" + major_changes.to_string(index=False)
+        send_email(
+            to="aadityajaiswal797@gmail.com",
+            subject="Price Alert",
+            html_content=msg
+        )
+
 
     coins_df.to_sql('coins', engine, if_exists='append', index=False)
     prices_df.to_sql('prices', engine, if_exists='append', index=False)
