@@ -17,6 +17,7 @@ from include.crypto.transform import transform_crypto_data
 from include.crypto.load import load_to_postgres
 
 
+
 with DAG(
     dag_id="crypto_pipeline",
     start_date=datetime(2024, 1, 1),
