@@ -1,0 +1,11 @@
+{"timestamp":"2026-02-27T06:52:18.260579Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-27T06:52:18.261661Z","level":"info","event":"Filling up the DagBag from /home/lap-48/Documents/projects/airflow/dags/crypto_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-27T06:52:18.363346Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-27T06:52:18.363525Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-27T06:52:18.363768Z","level":"info","event":"Current task name:fetch_top_50","logger":"task.stdout"}
+{"timestamp":"2026-02-27T06:52:18.363855Z","level":"info","event":"Dag name:crypto_pipeline","logger":"task.stdout"}
+{"timestamp":"2026-02-27T06:52:19.086443Z","level":"info","event":"fetched 50 coins successfully","logger":"include.crypto.extract","filename":"extract.py","lineno":25}
+{"timestamp":"2026-02-27T06:52:19.118401Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-02-27T06:52:19.137649Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-02-27T06:52:19.137826Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-02-27T06:52:19.138219Z","level":"info","event":"Task operator:<Task(PythonOperator): fetch_top_50>","logger":"task.stdout"}

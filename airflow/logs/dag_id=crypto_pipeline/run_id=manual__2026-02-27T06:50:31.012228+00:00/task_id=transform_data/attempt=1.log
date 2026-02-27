@@ -1,0 +1,19 @@
+{"timestamp":"2026-02-27T06:50:33.808249Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-27T06:50:33.808943Z","level":"info","event":"Filling up the DagBag from /home/lap-48/Documents/projects/airflow/dags/crypto_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-27T06:50:33.890022Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-27T06:50:33.890221Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-27T06:50:33.890452Z","level":"info","event":"Current task name:transform_data","logger":"task.stdout"}
+{"timestamp":"2026-02-27T06:50:33.890559Z","level":"info","event":"Dag name:crypto_pipeline","logger":"task.stdout"}
+{"timestamp":"2026-02-27T06:50:33.892444Z","level":"info","event":"Pulling data from XCom","logger":"include.crypto.transform","filename":"transform.py","lineno":61}
+{"timestamp":"2026-02-27T06:50:33.915216Z","level":"info","event":"Starting cleaning & normalization","logger":"include.crypto.transform","filename":"transform.py","lineno":10}
+{"timestamp":"2026-02-27T06:50:33.920627Z","level":"info","event":"Initial shape: (50, 26)","logger":"include.crypto.transform","filename":"transform.py","lineno":13}
+{"timestamp":"2026-02-27T06:50:33.926305Z","level":"info","event":"Shape after cleaning: (50, 26)","logger":"include.crypto.transform","filename":"transform.py","lineno":20}
+{"timestamp":"2026-02-27T06:50:33.932105Z","level":"info","event":"Coins table shape: (50, 3)","logger":"include.crypto.transform","filename":"transform.py","lineno":49}
+{"timestamp":"2026-02-27T06:50:33.932320Z","level":"info","event":"Prices table shape: (50, 3)","logger":"include.crypto.transform","filename":"transform.py","lineno":50}
+{"timestamp":"2026-02-27T06:50:33.932470Z","level":"info","event":"Market table shape: (50, 4)","logger":"include.crypto.transform","filename":"transform.py","lineno":51}
+{"timestamp":"2026-02-27T06:50:33.932584Z","level":"info","event":"Transformation completed ","logger":"include.crypto.transform","filename":"transform.py","lineno":53}
+{"timestamp":"2026-02-27T06:50:33.973177Z","level":"info","event":"Data pushed to XCom successfully","logger":"include.crypto.transform","filename":"transform.py","lineno":78}
+{"timestamp":"2026-02-27T06:50:33.973969Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-02-27T06:50:33.991446Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-02-27T06:50:33.991599Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-02-27T06:50:33.991855Z","level":"info","event":"Task operator:<Task(PythonOperator): transform_data>","logger":"task.stdout"}

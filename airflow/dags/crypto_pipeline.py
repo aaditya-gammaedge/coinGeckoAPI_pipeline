@@ -14,7 +14,7 @@ from datetime import datetime
 
 from include.crypto.extract import fetch_top_50_coins
 from include.crypto.transform import transform_crypto_data
-# from include.crypto.load import load_to_postgres
+from include.crypto.load import load_to_postgres
 
 
 with DAG(
@@ -39,12 +39,12 @@ with DAG(
     )
 
 
-    # load_task = PythonOperator(
-    #     task_id="load_to_postgres",
-    #     python_callable=load_to_postgres,
-    # )
+    load_task = PythonOperator(
+        task_id="load_to_postgres",
+        python_callable=load_to_postgres,
+    )
 
 
 
-    # fetch_task >> transform_task >> load_task
-    fetch_task >> transform_task
+    fetch_task >> transform_task >> load_task
+   
