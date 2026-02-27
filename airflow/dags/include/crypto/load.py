@@ -139,7 +139,7 @@ def load_to_postgres(**context):
 
         logger.info("Email alert")
 
-        msg = "Major price changes detected in:\n" + major_changes.to_string(index=False)
+        msg = "Major price changes detected in " + major_changes.to_string(index=False)
 
         send_email(
         to="aadityajaiswal797@gmail.com",
