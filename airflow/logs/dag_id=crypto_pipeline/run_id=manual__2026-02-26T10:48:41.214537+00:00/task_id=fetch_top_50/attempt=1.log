@@ -1,0 +1,12 @@
+{"timestamp":"2026-02-26T10:48:45.742453Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-26T10:48:45.745099Z","level":"info","event":"Filling up the DagBag from /home/lap-48/Documents/projects/airflow/dags/crypto_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-26T10:48:45.873021Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/home/lap-48/Documents/projects/airflow/dags/crypto_pipeline.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-02-26T10:48:46.023171Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-26T10:48:46.023454Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-26T10:48:46.024686Z","level":"info","event":"Current task name:fetch_top_50","logger":"task.stdout"}
+{"timestamp":"2026-02-26T10:48:46.025155Z","level":"info","event":"Dag name:crypto_pipeline","logger":"task.stdout"}
+{"timestamp":"2026-02-26T10:48:46.587783Z","level":"info","event":"Fetched 50 coins","logger":"task.stdout"}
+{"timestamp":"2026-02-26T10:48:46.696511Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-02-26T10:48:46.801265Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-02-26T10:48:46.801754Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-02-26T10:48:46.802671Z","level":"info","event":"Task operator:<Task(PythonOperator): fetch_top_50>","logger":"task.stdout"}
